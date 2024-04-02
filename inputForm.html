@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="input.css">
+    <script src="input.js"></script>
     <title>Info de stage</title>
 </head>
 <body>
-    <form>
+    <form id="formMain">
         <table id="tableMain">
             <tr>
                 <td colspan="3" id="entrezvos">
@@ -19,7 +20,7 @@
                    <label for="inputNom">Nom</label> 
                 </td>
                 <td colspan="2">
-                    <input type="text" id="inputNom">
+                    <input type="text" id="inputNom" name="inputNom">
                 </td>
             </tr>
             <tr>
@@ -27,7 +28,7 @@
                    <label for="inputPrenom">Prenom</label> 
                 </td>
                 <td colspan="2">
-                    <input type="text" id="inputPrenom">
+                    <input type="text" id="inputPrenom" name="inputPrenom">
                 </td>
             </tr>
             <tr>
@@ -35,7 +36,7 @@
                    <label  for="inputCIN">CIN</label> 
                 </td>
                 <td colspan="2">
-                    <input type="text" id="inputCIN">
+                    <input type="text" id="inputCIN" name="inputCIN">
                 </td>
             </tr>
             <tr>
@@ -43,7 +44,7 @@
                     <label for="inputEmail">E-Mail</label>
                 </td>
                 <td colspan="2">
-                    <input type="email" placeholder="example@gmail.com" id="inputEmail">
+                    <input type="email" placeholder="example@gmail.com" id="inputEmail" name="inputEmail">
                 </td>
             </tr>
             <tr>
@@ -51,10 +52,10 @@
                    <label for="inputDateDebut">Duree de stage</label> 
                 </td>
                 <td>
-                    <input type="date" id="inputDateDebut">
+                    <input type="date" id="inputDateDebut" name="inputDateDebut" value="2005-01-01">
                 </td>
                 <td>
-                    <input type="date" id="inputDateFin">
+                    <input type="date" id="inputDateFin" name="inputDateFin">
                 </td>
             </tr>
             <tr>
@@ -62,7 +63,8 @@
                     <label>Demande PDF</label>
                 </td>
                 <td colspan="2">
-                    <input type="file" id="inputDemande">
+                    <label class="button-file" for="inputDemande">Chargez votre demande</label>
+                    <input type="file" id="inputDemande" hidden>
                 </td>
             </tr>
             <tr>
@@ -70,7 +72,8 @@
                     <label>CV PDF</label>
                 </td>
                 <td colspan="2">
-                    <input type="file" id="inputCV">
+                    <label class="button-file" for="inputCV">Chargez votre CV</label>
+                    <input type="file" id="inputCV" hidden>
                 </td>
             </tr>
             <tr>
@@ -78,7 +81,8 @@
                     <label>Assurance PDF</label>
                 </td>
                 <td colspan="2">
-                    <input type="file" id="inputAssurance">
+                    <label class="button-file" for="inputAssurance">Chargez l'Assurance</label>
+                    <input type="file" id="inputAssurance" hidden>
                 </td>
             </tr>
             <tr>
@@ -97,7 +101,7 @@
             </tr>
             <tr>
                 <td colspan="3" id="tdButton">
-                    <button type="submit">Envoyez!</button>
+                    <button type="submit" onClick="formSubmitted(formMain)">Envoyez!</button>
                 </td>
             </tr>
         </table>
