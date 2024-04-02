@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <title>Info de stage</title>
+</head>
+<body>
+    <form>
+        <table id="tableMain">
+            <tr>
+                <td colspan="3" id="entrezvos">
+                    Entrez vos informations!
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <label for="inputNom">Nom</label> 
+                </td>
+                <td colspan="2">
+                    <input type="text" id="inputNom">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <label for="inputPrenom">Prenom</label> 
+                </td>
+                <td colspan="2">
+                    <input type="text" id="inputPrenom">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <label  for="inputCIN">CIN</label> 
+                </td>
+                <td colspan="2">
+                    <input type="text" id="inputCIN">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputEmail">E-Mail</label>
+                </td>
+                <td colspan="2">
+                    <input type="email" placeholder="example@gmail.com" id="inputEmail">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <label for="inputDateDebut">Duree de stage</label> 
+                </td>
+                <td>
+                    <input type="date" id="inputDateDebut">
+                </td>
+                <td>
+                    <input type="date" id="inputDateFin">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Demande PDF</label>
+                </td>
+                <td colspan="2">
+                    <input type="file" id="inputDemande">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>CV PDF</label>
+                </td>
+                <td colspan="2">
+                    <input type="file" id="inputCV">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Assurance PDF</label>
+                </td>
+                <td colspan="2">
+                    <input type="file" id="inputAssurance">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputTheme">Theme de stage</label>
+                </td>
+                <td>
+                    <select id="inputTheme">
+                        <option value="none_selected">Selectionner</option>
+                        <option value="genie_info">Genie Informatique</option>
+                        <option value="genie_civil">Genie Civil</option>
+                        <option value="tech_juri">Techniques Juridiques</option>
+                        <option value="logist">Logistiques</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" id="tdButton">
+                    <button type="submit">Envoyez!</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
